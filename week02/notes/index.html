@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 02 Notes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body onload="getDates()">
+    <nav class="main-nav">
+        <a href="../../">Home</a>
+        <a href="../../">&#8592 Main Assignment Portal</a>
+    </nav>
+
+    <div class="page">
+        <header class="page-header">
+            <div class="page-header__wrapper">
+                <div class="heading">
+                    <h1 class="heading-title">Denzil Museruka <small>(WDD 330)</small> </h1>
+                    <div class="heading-rule">
+                        <div class="heading-rule-before"></div>
+                        <div class="heading"> Week 02 - Notes</div>
+                        <div class="heading-rule-after"></div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+
+        <div class="content ">
+            <div class="content__wrapper">
+                <div class="heading-subtitle">
+                    <p>I did not take notes on chapters 2 as it was review.</p>
+                </div>
+                <div class="heading-rule">
+                    <div class="heading-rule-before"></div>
+                    <div class="heading">Chapter 03: Arrays, Logic, and Loops</div>
+                    <div class="heading-rule-after"></div>
+                </div>
+                <div>
+                    <h3>ARRAYS</h3>
+                    <ul>
+                        <li>An array is an ordered list of values</li>
+                        <li>Its created using square brackets:</li>
+                        <div class="code-snipet">
+                            <pre><code >const myArray = [];
+                        </code></pre>
+                        </div>
+                        <li>To access a specific value in an array, we write its position in the array (index)
+                        </li>
+                        <li>To assign a specific value to an element in an array, weassign by specifying it's index
+                        </li>
+                        <div class="code-snipet">
+                            <pre><code >
+                                array[index] = value;
+                            </code></pre>
+                        </div>
+                        <li>We can create an array literal using square brackets that already contain some
+                            initial values</li>
+                        <div class="code-snipet">
+                            <pre><code >const avengers = ['Captain America', 'Iron Man', 'Thor','Hulk'];
+                            </code></pre>
+                        </div>
+                    </ul>
+                    <h4>Removing Values from Arrays</h4>
+                    <ul>
+                        <li>The delete operator will remove an item from an array but the value will be replaced by a
+                            value of
+                            undefined:</li>
+                        <div class="code-snipet">
+                            <pre><code >delete array[index];</code></pre>
+                        </div>
+                    </ul>
+                    <h4></h4>
+                    <ul>
+                        <li>Destructuring an array is the concept of taking values out of an array and
+                            presenting them as individual values.</li>
+                        <div class="code-snipet">
+                            <pre><code >const [x,y] = [1,2];
+                                x
+                                    << 1
+                                y
+                                    << 2
+                            </code></pre>
+                        </div>
+                    </ul>
+                    <h4>Array Properties and Methods</h4>
+                    <ul>
+                        <li>To find the length of an array, we can use the length property
+                            <pre> <code>array.length</code></pre>.
+                        </li>
+                        <li>To remove the last item from an array, we can use the pop() method
+                            <pre> <code>array.pop()</code></pre>.The method returns the last item of the array, but the
+                            array no
+                            longer contains
+                            that item.
+                        </li>
+                        <li>The shift() method works in a similar way to the pop() method, but this
+                            removes the first item in the array
+                            <pre> <code>array.shift()</code></pre>.
+                        </li>
+                        <li>The push method appends a new value to the end of the array
+                            <pre> <code>array.push(value)</code></pre>.The return value is the new length of the array
+                        </li>
+                        <li>The unshift method is similar to the push() method, but this appends a new
+                            item to the beginning of the array
+                            <pre>  <code>array.unshift(value)</code></pre>.
+                        </li>
+                        <li>The concat method can be used to merge an array with one or more arrays
+                            <pre>  <code>array1.concat(array2)</code></pre>.
+                        </li>
+                        <li>The join method can be used to turn the array into a string that comprises all
+                            the items in the array, separated by a named character, if not specified, a comma will be
+                            used
+                            <pre>  <code>array.join(' & ');<br>
+ << 'value 1 & Value 2 & Value 3 &</code></pre>.
+                        </li>
+                        <li>The slice method creates a subarray, effectively chopping out a slice of an
+                            original array, starting at one position and finishing at another
+                            <pre>  <code>array.slice(startIndex,endIndex);</code></pre>.
+                        </li>
+                        <li>The splice method removes items from an array then inserts new items in
+                            their place.
+                            <pre>  <code>array.splice(startIndex,howMany,'replacement-value');</code></pre>.
+                        </li>
+                        <li>We can reverse the order of an array using the reverse method.
+                            <pre>  <code>array.reverse();</code></pre>.
+                        </li>
+                        <li>We can sort the order of an array using the sort method.
+                            <pre>  <code>array.sort();</code></pre>.
+                        </li>
+                        <li>ES6 also introduced the includes() method. This returns a boolean value
+                            depending on whether the array contains a particular element or not
+                            <pre>  <code>array.includes(value);</code></pre>.
+                        </li>
+                    </ul>
+                    <h4>Multidimensional Arrays (array of arrays)</h4>
+                    <ul>
+                        <li>To access the values in a multidimensional array, we use two indices: one to refer
+                            to the item’s place in the outer array, and one to refer to its place in the inner
+                            array
+                        </li>
+                        <li>The spread operator that we met earlier can be used to flatten multi-dimensional
+                            arrays
+                        </li>
+                    </ul>
+                    <h3>SETS</h3>
+                    <ul>
+                        <li>A set is a data structure that represents a collection of unique values</li>
+                        <li>An empty set is created using the new operator
+                            <pre>  <code>const list = new Set();</code></pre>.
+                        </li>
+                        <li>Values can be placed into a set using the add method
+                            <pre>  <code>list.add(value);</code></pre>.
+                        </li>
+                        <li>All non-primitive values, such as arrays and objects, are considered unique
+                            values, even if they contain the same values.
+                        </li>
+                    </ul>
+                    <h4>Set Properties and Methods</h4>
+                    <ul>
+                        <li>The number of values in a set can be found using the size method</li>
+                        <li>The clear() method can be used to remove all values from a set</li>
+                        <li>The has() method can be used to check if a value is in a set. This returns a
+                            boolean value of true or false</li>
+                        <li>The delete method can be used to remove a value from a set. This returns a
+                            boolean value of true if the value was removed from the set, or false if the value
+                            wasn’t in the set and couldn’t be removed</li>
+                        <li>A set can be converted into an array by placing the set, along with the spread
+                            operator directly inside an array literal.</li>
+                    </ul>
+                    <h5>additional notes</h5>
+                    <ul>
+                        <li>A memory leak occurs when a program retains references to values that can no
+                            longer be accessed in its memory.</li>
+                        <li>A memory leak occurs when a program retains references to values that can no
+                            longer be accessed in its memory.</li>
+                        <li>Weak sets avoid this situation by garbage collecting any references to a “dead
+                            object” that’s had its original reference removed.
+                        <li> To create a weak set, the new operator and the WeakSet() constructor in the same
+                            way that we created a set
+                            <pre>  <code>const weak = new WeakSet();</code></pre>.
+                        </li>
+                    </ul>
+                    <h3>LOGIC</h3>
+
+                    <ul>
+                        <li>
+                            <pre><code>
+        if (condition) {
+        // code to run if condition is true
+        }
+    </code></pre>
+                        </li>
+                        <li>The else keyword can be used to add an alternative block of code to run if the
+                            condition is false</li>
+                        <li>shorthand:
+                            <pre><code>condition ? true-code : false-code
+                                </code></pre>
+
+                        </li>
+                        <li>The switch operator can be used to make your code easier to follow when there
+                            are lots of conditions to test
+                            <pre><code>switch(condition){   
+    case opt1:
+     break
+    case opt2:
+      break
+    case opt3:
+      break
+    default:
+     break
+  }
+                                </code></pre>
+                        </li>
+                    </ul>
+                    <h4>Loops</h4>
+                    <ul>
+                        <li>A while loop will repeatedly run a block of code while a certain condition is true</li>
+                        <li>A do ... while loop is similar to a while loop. The only difference is that the condition
+                            comes after the block of code</li>
+                        <li>
+                            <pre><code>for (initialization ; condition ; after) { do something }</code></pre>.
+                            You can place a loop inside another loop to create a nested loop
+                        </li>
+                    </ul>
+
+
+
+                </div>
+                <div class="heading-rule">
+                    <div class="heading-rule-before"></div>
+                    <div class="heading">Chapter 04: Functions</div>
+                    <div class="heading-rule-after"></div>
+                </div>
+
+                <div>
+                    <h4>Defining a Function</h4>
+                    <ul>
+                        <li>Defining a function:</li>
+                        <div class="code-snipet">
+                            <pre><code >function hello() {
+                                console.log('Hello World!');
+                                }
+    </code></pre>
+                        </div>
+                        <li>Defing a function literal using a function expression (This assigns ananonymous
+                            function to a variable):
+                        </li>
+                        <div class="code-snipet">
+                            <pre><code >const goodbye = function(){
+            console.log('Goodbye World!');
+        };</code></pre>
+                        </div>
+                        <li>All functions have a read-only property called name:
+                            <code>hello.name</code>
+                        </li>
+
+                    </ul>
+                    <h4>Function Constructors</h4>
+                    <ul>
+                        <li>A function can also be declared using the constructor <code>Function()</code> . The body of
+                            the function is entered as a
+                            string:</li>
+                        <div class="code-snipet">
+                            <pre><code >const hi = new Function('console.log("Hi World!");');</code></pre>
+                        </div>
+                        <li>It is not recomended to declare functions with the function constructor, there are too many
+                            issues when a function is put into a string. Functions created this way are also created in
+                            the global scope, regardless of where they are actually declared. This can lead to some
+                            strange and unexpected behavior.</li>
+                    </ul>
+                    <h4>Invoking Function and Return Values</h4>
+                    <ul>
+                        <li>Invoking a function tells the computer to run the code inside the functions body. It is easy
+                            to invoke a function, type its name followed by parentheses.</li>
+                        <div class="code-snipet">
+                            <pre><code >hello();</code></pre>
+                        </div>
+                        <li class="notice">Not including the parentheses after the name of the function/variable, will
+                            just be a reference to the function/variable, not allowing it to be invoked/executed. </li>
+
+                        <li>All functions will return something. If the return statement is omitted, then the function
+                            returns <code>undefined</code>. All other return statements will
+                            return the value specified.</li>
+                    </ul>
+                    <h4>Parameters and Arguments</h4>
+                    <ul>
+                        <li>Parameters and arguments are terms often used interchangeably to represent values
+                            provided for the function as an input. There is a subtle difference though: any parameters a
+                            function needs are set when the function is <em>defined</em>. When a function is
+                            <em>invoked</em>, it is provided with arguments.
+                        </li>
+                        <li>To specify a default parameter, simply assign the default
+                            value to it in the function definition></li>
+                    </ul>
+                    <ul>
+                        <li>Arrow functions are always anonymous, so if you want to refer to
+                            them, you must assign them to a variable</li>
+                        <li>Variable declarations that use the var keyword are automatically moved to the
+                            top of the current scope</li>
+                    </ul>
+                    <h4>Callbacks</h4>
+                    <ul>
+                        <li>Since functions are first class objects. This allows us to treat them like any other object
+                            and pass them into other functions. This is commanly reffered to a callback. example from
+                            book: </li>
+                        <div class="code-snipet">
+                            <pre><code >function sing(song) {
+            console.log(`I'm singing along to ${song}`);
+        }
+        sing('ABCDEFG')
+        'I'm singing along to an alpgabet song'</code></pre>
+                        </div>
+
+
+                        <li>Adding the callback parameter</li>
+                        <div class="code-snipet">
+                            <pre><code >function sing(song,callback) {
+            console.log(`I'm singing along to ${song}.`);
+            callback();
+        }</code></pre>
+                        </div>
+                        <li>Creating the callback function</li>
+                        <div class="code-snipet">
+                            <pre><code >function dance() 
+     console.log("I'm moving my body to the groove.");
+        }</code></pre>
+                        </div>
+                        <li>Invoking our function with the new callback</li>
+                        <div class="code-snipet">
+                            <pre><code >sing('Gitchee Gitchee Goo',dance);
+        'I'm singing along to Gitchee Gitchee Goo.'
+        'I'm moving my body to the groove.'</code></pre>
+                        </div>
+                        <li>Callbacks are passed into the function as a paramenter without the parentheses. The callback
+                            will be executed in the function with the parentheses, generally when some task has been
+                            executed.</li>
+                    </ul>
+                    <h4>Questions</h4>
+                   <p>It's loud and clear</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; <span id="currentYear"></span> Spring | WDD 330 Portfolio | Denzil Museruka | <span
+            id="updateDate"></span>
+    </footer>
+    <script src="../../js/main.js"></script>
+
+</body>
+
+</html>
